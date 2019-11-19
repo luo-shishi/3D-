@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+        }
+
+        .parent {
+            position: relative;
+            -webkit-perspective: 8000px;
+            margin-top: 500px;
+            height: 800px;
+            width: 80%;
+            margin-left: 10%;
+            transform-style: preserve-3d;
+            animation: test1 16s ease infinite;
+        }
+/*小盒子*/
+        .box-one {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -100px;
+            margin-left: -100px;
+            width: 200px;
+            height: 200px;
+            color: #FFFFFF;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 200px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        .box1 {
+            background: #2b669a;
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+
+        .box2 {
+            background: #509a64;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .box3 {
+            background: #9a5468;
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+
+        .box4 {
+            background: #979a25;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .box5 {
+            background: #97709a;
+            transform: translateZ(-100px);
+        }
+
+        .box6 {
+            background: #589a25;
+            transform: translateZ(100px);
+        }
+
+        @keyframes test1 {
+            0% {
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+
+            100% {
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+        /*大盒子*/
+        .box-two {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -200px;
+            margin-left: -200px;
+            width: 400px;
+            height: 400px;
+            color: #FFFFFF;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 400px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        .boxa {
+            background: #2b669a;
+            transform: rotateY(90deg) translateZ(-200px);
+            animation: test-one 16s ease infinite;
+        }
+
+        .boxb {
+            background: #509a64;
+            transform: rotateY(90deg) translateZ(200px);
+            animation: test-two 16s ease infinite;
+        }
+
+        .boxc {
+            background: #9a5468;
+            transform: rotateX(90deg) translateZ(-200px);
+            animation: test-three 16s ease infinite;
+        }
+
+        .boxd {
+            background: #979a25;
+            transform: rotateX(90deg) translateZ(200px);
+            animation: test-four 16s ease infinite;
+        }
+
+        .boxe {
+            background: #97709a;
+            transform: translateZ(-200px);
+            animation: test-five 16s ease infinite;
+        }
+
+        .boxf {
+            background: #589a25;
+            transform: translateZ(200px);
+            animation: test-six 16s ease infinite;
+        }
+        @keyframes test-one {
+            0% {
+                transform:rotateY(90deg) translateZ(-200px);
+            }
+
+            50% {
+                transform:rotateY(90deg) translateZ(-400px);
+            }
+            100% {
+                transform:rotateY(90deg) translateZ(-200px);
+            }
+
+        }
+        @keyframes test-two {
+            0% {
+                transform: rotateY(90deg) translateZ(200px);
+            }
+
+            50% {
+                transform:rotateY(90deg) translateZ(400px);
+            }
+            100% {
+                transform: rotateY(90deg) translateZ(200px);
+            }
+        }
+        @keyframes test-three {
+            0% {
+                transform: rotateX(90deg) translateZ(-200px);
+            }
+
+            50% {
+                transform:rotateX(90deg) translateZ(-400px);
+            }
+            100% {
+                transform: rotateX(90deg) translateZ(-200px);
+            }
+        }
+        @keyframes test-four {
+            0% {
+                transform: rotateX(90deg) translateZ(200px);
+            }
+
+            50% {
+                transform: rotateX(90deg) translateZ(400px);
+            }
+            100% {
+                transform: rotateX(90deg) translateZ(200px);
+            }
+        }
+        @keyframes test-five {
+            0% {
+                transform: translateZ(-200px);
+            }
+
+            50% {
+                transform: translateZ(-400px);
+            }
+            100% {
+                transform: translateZ(-200px);
+            }
+        }
+        @keyframes test-six {
+            0% {
+                transform: translateZ(200px);
+            }
+
+            50% {
+                transform: translateZ(400px);
+            }
+            100% {
+                transform: translateZ(200px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent animation" id="css3d">
+        <!--小盒子-->
+        <div class="box-one box1">1</div>
+        <div class="box-one box2">2</div>
+        <div class="box-one box3">3</div>
+        <div class="box-one box4">4</div>
+        <div class="box-one box5">5</div>
+        <div class="box-one box6">6</div>
+
+        <!--大盒子-->
+        <div class="box-two boxa">1</div>
+        <div class="box-two boxb">2</div>
+        <div class="box-two boxc">3</div>
+        <div class="box-two boxd">4</div>
+        <div class="box-two boxe">5</div>
+        <div class="box-two boxf">6</div>
+
+    </div>
+</body>
+
+</html>
